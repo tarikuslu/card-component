@@ -1,0 +1,125 @@
+:root {
+    --white: #ecf1f3;
+    --cream: hsl(30, 38%, 92%);
+    --black: #202221;
+    --green: hsl(158, 36%, 37%);
+    --hover-green: hsl(158, 27%, 50%);
+    --gray: hsl(120, 0%, 59%);
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;   
+}
+
+body {
+    height: 100vh;
+    line-height: 1.1;
+    position: relative;
+    background-color: var(--cream);
+}
+
+img {
+    width: 100%;
+    
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+}
+
+h1,h2 {
+    font-family: 'Fraunces', serif;;
+}
+
+h4, p, button {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gray)
+}
+
+h1, .product-description {
+    padding: 0.3rem 0;
+}
+
+
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 40%;
+    border-radius: 0.7rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+  
+}
+.card-info {
+   display: grid;
+   padding: 1.5rem; 
+}
+
+.product-pricement {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product-pricement p {
+    margin-top: 0.2em;
+    text-decoration: line-through;
+}
+
+button  {
+    border: 0;
+    background-color: var(--green);
+    border-radius: 0.7rem;
+    color: var(--white);
+}
+
+button:hover {
+    background-color: var(--hover-green);
+    
+}
+
+  @media screen and (max-width: 876px) {
+    .card {
+     min-width: 85%;
+    }
+
+    .card-info, button {
+        padding: 1.6rem; 
+     }
+
+     .product-pricement p {
+        margin-top: 0.5em;
+    }
+   }
+
+   @media screen and (max-width: 876px) {
+    .card {
+     min-width: 85%;
+    }
+    .card-info, button {
+        padding: 1.8rem; 
+     }
+
+     .product-pricement p {
+        margin-top: 0.7em;
+    }
+   }
+
+   @media screen and (max-width: 600px) {
+    .card {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-width: 10%;
+    }
+
+    .card-info, button {
+        padding: 1rem; 
+     }
+
+     .product-pricement p {
+        margin-top: 0.2em;
+    }
+   }
